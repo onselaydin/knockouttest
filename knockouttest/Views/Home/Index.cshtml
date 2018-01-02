@@ -1,0 +1,42 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+@section Scripts {
+    @Scripts.Render("~/Scripts/Models/foreachbinding_.js")
+}
+<div class="jumbotron">
+    <h1>ASP.NET</h1>
+    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
+    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+       
+        <table>
+            <thead>
+                <tr><th>First name</th><th>Age</th></tr>
+            </thead>
+            <tbody data-bind="foreach: children">
+                <tr>
+                    <td data-bind="text: firstName"></td>
+                    <td data-bind="text: age"></td>
+                </tr>
+            </tbody>
+        </table>
+
+
+    </div>
+    <div class="col-md-4">
+        <div data-bind="with: wife">
+            Wife's first name: <span data-bind="text: firstName"></span>.<br />
+            Wife's last name: <span data-bind="text: lastName"></span>.
+        </div>
+
+    </div>
+    <div class="col-md-4">
+        <form>
+            <select multiple="multiple" data-bind="options: kids"></select>
+        </form>
+    </div>
+</div>

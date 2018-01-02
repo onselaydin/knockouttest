@@ -1,0 +1,52 @@
+﻿
+@{
+    ViewBag.Title = "textbinding";
+}
+@section Scripts {
+    @Scripts.Render("~/Scripts/Models/textbinding.js")
+}
+
+
+
+
+
+<h2>textbinding</h2>
+
+
+The first name is <span data-bind="text: firstName"></span>
+
+
+@*<span data-bind="text: age()>= 18 ? 'adult' : 'young'"></span>*@
+
+@*<input class="form-control input-sm" type="text" data-bind="text: firstName" />*@
+
+<div data-bind="style: { color: favoricolor() }">
+
+    <span data-bind="html: about"></span>
+
+    </div>
+
+<p>onsel's favorite site is <a data-bind="attr: { href: favoriurl() }"></a>.</p>
+
+<p>
+
+    <div data-bind="visible: favorisite().length > 0">
+        onsel's favorite site is <span data-bind="text: favorisite"></span>.
+    </div>
+</p>
+
+<p>
+    <input type="text" data-bind="value: firstName" />.
+</p>
+
+<br />
+<form>
+    <p>
+        <input type="checkbox" data-bind="checked: isMarried" />
+        Is married     
+    </p>
+    <p>
+        Wife's name:
+        <input type="text" data-bind="value: wife, enable: isMarried" />
+    </p>
+</form>

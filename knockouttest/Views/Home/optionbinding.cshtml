@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "optionbinding";
+}
+
+@section Scripts {
+    @Scripts.Render("~/Scripts/Models/optionbinding_.js")
+}
+<h2>optionbinding</h2>
+
+<form>
+    <select multiple="multiple" data-bind="options: children"></select>
+
+    <select multiple="multiple" data-bind="options: children, selectedOptions: selectedChildren"></select>
+</form>

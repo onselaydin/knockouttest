@@ -1,0 +1,42 @@
+﻿@model knockouttest.Models.LibraryModel
+@{   ViewBag.Title = "About";}
+
+@section Scripts {
+    @Scripts.Render("~/Scripts/Models/Library.js")
+}
+
+<h2>@ViewBag.Title</h2>
+<h3>@ViewBag.Message</h3>
+
+<p>Use this area to provide additional information.</p>
+
+<div class="container">
+    <h2 style="text-align: center">
+        <span data-bind="text: Name"></span>
+    </h2>
+    <table class="table table-bordered table-striped table-condensed table-hover">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Year</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody data-bind="foreach: Books">
+            <tr>
+                <td data-bind="text: Title"></td>
+                <td data-bind="text: Author"></td>
+                <td data-bind="text: Year"></td>
+                <td>
+                    <a href="#" data-bind="click: $root.edit" class="btn btn-primary btn-xs">Edit</a>
+                    <a href="#" data-bind="click: $root.remove" class="btn btn-primary btn-xs">Remove</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <a href="#" data-bind="click: add" class="btn btn-primary">
+        Add
+        new book
+    </a>
+</div>

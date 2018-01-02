@@ -1,0 +1,3 @@
+﻿
+knockout mvc computed  (Helloworldmodel.cs)
+PM> Install-Package kMVC

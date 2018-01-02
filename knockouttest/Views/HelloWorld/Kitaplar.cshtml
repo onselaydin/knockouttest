@@ -1,0 +1,26 @@
+﻿
+@using PerpetuumSoft.Knockout
+@model knockouttest.Models.KutuphaneModel
+@{
+    var ko = Html.CreateKnockoutContext();
+}
+
+<table>
+    <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Year</th>
+    </tr>
+    @using (var books = ko.Foreach(m => m.Kitaplar))
+    {
+        <tr>
+            @using (var book = books.With(m => m))
+            {
+                <td @book.Bind.Text(m => m.Title)></td>
+                <td @book.Bind.Text(m => m.Author)></td>
+                <td @book.Bind.Text(m => m.Year)></td>
+            }
+        </tr>
+    }
+</table>
+@ko.Apply(Model)

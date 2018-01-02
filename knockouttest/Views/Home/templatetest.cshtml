@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "templatetest";
+}
+@section Scripts {
+    @Scripts.Render("~/Scripts/Models/template.js")
+}
+<h2>templatetest</h2>
+
+<div data-bind="template: { name: 'book-template', data: book1 }"></div>
+<div data-bind="template: { name: 'book-template', data: book2 }"></div>
+<div data-bind="template: { name: 'book-template', data: book2 }"></div>
+
+<script type="text/html" id="book-template">
+    <h3 data-bind="text: title"></h3>
+    <p>Author: <span data-bind="text: author"></span></p>
+    <p>Year: <span data-bind="text: year"></span></p>
+
+    @*<li>
+        <strong data-bind="text: title"></strong>
+        <ul data-bind="template: { name: 'character-template', foreach: characters, as: 'character' }"></ul>
+    </li>*@
+</script>
+
+<script type="text/html" id="character-template">
+    <li>
+        <span data-bind="text: character"></span> is a character in the "<span data-bind="text: book.title"></span>" book
+    </li>
+</script>
+
+@*<ul data-bind="template: { name: 'book-template', foreach: books, as: 'book' }"></ul>*@

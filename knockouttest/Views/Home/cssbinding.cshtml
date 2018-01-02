@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "cssbinding";
+}
+<style type="text/css">
+    .redStyle {
+        color: red;
+    }
+
+    .greenStyle {
+        color: green;
+    }
+</style>
+
+@*<script src='@Url.Content("~/Scripts/Models/cssbinding_.js")'></script>*@
+
+@section Scripts {
+    @Scripts.Render("~/Scripts/Models/cssbinding_.js")
+}
+<h2>cssbinding</h2>
+
+<div data-bind="css: { redStyle: favoriteColor() == 'red',
+greenStyle: favoriteColor() == 'green' }">onsel's favorite color is<span data-bind="text: favoriteColor"></span>.</div>
