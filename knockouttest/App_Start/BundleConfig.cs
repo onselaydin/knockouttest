@@ -30,7 +30,7 @@ namespace knockouttest
                       "~/Content/site.css"));
 
             bundles.Add(new ScriptBundle("~/bundles/knockout").Include(
-                       "~/Scripts/knockout-{version}.js"));
+                       "~/Scripts/knockout-3.4.2.js"));
           
 
         }

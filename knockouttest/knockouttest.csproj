@@ -85,10 +85,6 @@
       <HintPath>..\packages\Mono.Reflection.1.0.0.0\lib\Mono.Reflection.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="PerpetuumSoft.Knockout, Version=0.6.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\kMVC.0.6.0\lib\net40\PerpetuumSoft.Knockout.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -197,16 +193,14 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\knockout-3.4.2.debug.js" />
     <Content Include="Scripts\knockout-3.4.2.js" />
-    <Content Include="Scripts\knockout.mapping-latest.debug.js" />
-    <Content Include="Scripts\knockout.mapping-latest.js" />
     <Content Include="Scripts\Models\cssbinding_.js" />
     <Content Include="Scripts\Models\foreachbinding_.js" />
     <Content Include="Scripts\Models\htmlbinding_.js" />
     <Content Include="Scripts\Models\Library.js" />
     <Content Include="Scripts\Models\optionbinding_.js" />
+    <Content Include="Scripts\Models\optionlist.js" />
     <Content Include="Scripts\Models\template.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
-    <Content Include="Scripts\perpetuum.knockout.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\Models\textbinding.js" />
@@ -230,12 +224,12 @@
     <Content Include="Views\Home\cssbinding.cshtml" />
     <Content Include="Views\Home\optionbinding.cshtml" />
     <Content Include="Views\Home\templatetest.cshtml" />
-    <Content Include="Views\HelloWorld\Index.cshtml" />
+    <Content Include="Views\Library\Index.cshtml" />
     <Content Include="Views\HelloWorld\Kitaplar.cshtml" />
+    <Content Include="Views\Home\AcilirListe.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Library\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

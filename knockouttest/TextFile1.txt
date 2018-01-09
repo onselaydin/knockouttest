@@ -1,3 +1,6 @@
 ﻿
 knockout mvc computed  (Helloworldmodel.cs)
 PM> Install-Package kMVC
+
+
+https://www.codeproject.com/Articles/680553/Knockout-js-for-Beginners

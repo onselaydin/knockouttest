@@ -1,11 +1,11 @@
 ﻿using System.Web.Mvc;
 using knockouttest.Models;
-using PerpetuumSoft.Knockout;
+//using PerpetuumSoft.Knockout;
 using System.Collections.Generic;
 
 namespace knockouttest.Controllers
 {
-    public class HelloWorldController : KnockoutController
+    public class HelloWorldController : Controller //KnockoutController
     {
         // GET: HelloWorld
         public ActionResult Index()

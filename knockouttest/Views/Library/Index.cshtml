@@ -1,0 +1,39 @@
+﻿@*@using PerpetuumSoft.Knockout
+@model knockouttest.Models.HelloWorldModel
+
+@{ var ko = Html.CreateKnockoutContext(); }
+
+
+
+
+
+<p>First name: @ko.Html.TextBox(m => m.FirstName)</p>
+    <p>Last name: @ko.Html.TextBox(m => m.LastName)</p>
+    <h2>Hello, @ko.Html.TextBox(m => m.FullName)!</h2>
+    @ko.Apply(Model)*@
+
+<h5>test</h5>
+
+@using PerpetuumSoft.Knockout
+@model knockouttest.Models.KutuphaneModel
+@*@model IEnumerable<knockouttest.Models.KutuphaneModel>*@
+@{
+  
+var ko = Html.CreateKnockoutContext();
+}
+<table>
+    <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Year</th>
+    </tr>
+    @using (var books = ko.Foreach(m => m.Kitaplar))
+    {
+        <tr>
+            <td @books.Bind.Text(book => book.Title)></td>
+            <td @books.Bind.Text(book => book.Author)></td>
+            <td @books.Bind.Text(book => book.Year)></td>
+        </tr>
+    }
+</table>
+@ko.Apply(Model)

@@ -5,17 +5,32 @@ using System.Web;
 using System.Web.Mvc;
 
 using knockouttest.Models;
+//using PerpetuumSoft.Knockout;
 
 namespace knockouttest.Controllers
 {
-    public class LibraryController : Controller
+    public class LibraryController : Controller//KnockoutController
     {
 
-        private static readonly LibraryModel Library = new LibraryModel();
+       private static readonly LibraryModel Library = new LibraryModel();
+
+        //Kitap modelden beslenmekte
         public ActionResult Index()
         {
-            return View(Library);
+            var model = new KutuphaneModel
+            {
+               Kitaplar  = new List<KitapModel>
+                    {
+                    new KitapModel { Title = "Oliver Twist", Author = "Charles Dickens", Year = 1837 },
+                    new KitapModel { Title = "Winnie-the-Pooh", Author = "A.A. Milne", Year = 1926 },
+                    new KitapModel { Title = "The Hobbit", Author = "J. R. R.Tolkien", Year = 1937 },
+                    }
+                    };
+            return View(model);
         }
+
+
+
         public JsonResult GetName()
         {
             return Json(Library.Name, JsonRequestBehavior.AllowGet);

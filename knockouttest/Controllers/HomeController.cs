@@ -1,4 +1,5 @@
-﻿using System;
+﻿//using PerpetuumSoft.Knockout;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -6,7 +7,7 @@ using System.Web.Mvc;
 
 namespace knockouttest.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : Controller//KnockoutController
     {
         public ActionResult Index()
         {
@@ -56,6 +57,11 @@ namespace knockouttest.Controllers
         {
             ViewBag.Message = "template test.";
 
+            return View();
+        }
+
+        public ActionResult AcilirListe()
+        {
             return View();
         }
 
